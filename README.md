@@ -1,31 +1,31 @@
-<div align="center">
-  <h1>iidx2bms</h1>
+# orajaroot
 
-  <img src="https://github.com/Glebsin/iidx2bms/blob/resources/iidx2bms_logo.svg?raw=true" width="200" alt="iidx2bms logo">
+[简体中文](README.zh-CN.md) · English
 
-  <p>Tool for converting iidx 33 charts to bms charts</p>
-</div>
+A personal fork of [iidx2bms](https://github.com/Glebsin/iidx2bms). I keep it **only** as an internal
+component of the [LR2oraja Endless Dream](https://github.com/seraxis/lr2oraja-endlessdream) setup I run for
+myself locally. It is not affiliated with either of those projects, and it is not meant for anyone else.
 
-# HOW TO USE 
+There are no releases and no prebuilt binaries here. Nothing in this repository is a guide: there are no
+setup, usage or conversion instructions, and no information about where any game data can be obtained.
 
-1. Download [`iidx2bms.zip`](https://github.com/Glebsin/iidx2bms/releases/download/2026.920.0/iidx2bms.zip) from Releases
-2. Launch iidx2bms.exe
-3. Choose your `\contents\data\sound\` and `\contents\data\movie\` paths, you can also change output folder (all paths can be changed in the settings later)
-4. Find charts that you want to convert in search bar
-5. Select charts by double-clicking or pressing enter
-6. Click `Start conversion` button
-7. Solve problems in `Chart editing` panel if chart has non-standard symbols in artist name, title or genre
-8. Solve problems in `Chart editing` panel if difficulty not found for .bme files
-9. Get result in `Result` folder
+## What this branch is
 
-**Tested on Windows 11, doesn't work with omnimix charts, doesn't work with charts that have more than one .2dx file, not counting _pre.2dx**
+`orajaroot` is a trimmed, non-interactive variant of the upstream project: the GUI application, the
+packaging script and icon, and the unused `ifs_unpack` module have been dropped, leaving the internal
+modules that my own local setup calls. It is a personal working copy, not a product, and no support is
+offered for it.
 
-**Converted charts tested in [**`LR2oraja Endless Dream`**](https://github.com/seraxis/lr2oraja-endlessdream)** (Maybe it will work in [`OpenLR2`](https://github.com/GOMazk/OpenLR2))
+## Copyright notice
 
-# HOW TO COMPILE
-Install requirements - `python -m pip install --upgrade pip && python -m pip install PyQt6 ifstools pyinstaller`
+- This repository does not provide any patch, key or method for breaking, bypassing or decrypting any
+  protection or encryption.
+- It does not provide links to, or information about, where game data can be obtained.
+- It provides no setup, usage, conversion or troubleshooting guides.
+- No license is granted for any part of this repository. I claim no rights over any third-party or
+  game-derived content it contains or references; that content remains the property of its respective
+  rights holders, and is not licensed, distributed or supported here.
+- Upstream iidx2bms and the helper tools bundled with it remain the property of their respective authors.
 
-Compile iidx2bms exe file - `py -m PyInstaller --noconfirm --clean --windowed --onefile --name iidx2bms --icon icon\iidx2bms_logo.ico --hidden-import PyQt6.QtSvg --hidden-import ifstools.ifs --collect-all ifstools --add-data "icon;icon" --add-data "music_data;music_data" --add-data "stagefiles;stagefiles" --add-data "one2bme;one2bme" --add-data "2dx_extract;2dx_extract" --add-data "s3p_extract;s3p_extract" --add-data "ifs_unpack;ifs_unpack" main.py`
-
-
-
+> [!CAUTION]
+> Don't use this to play non-permitted copyrighted contents.
