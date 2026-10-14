@@ -6,9 +6,6 @@ A personal fork of [iidx2bms](https://github.com/Glebsin/iidx2bms). I keep it **
 component of the [LR2oraja Endless Dream](https://github.com/seraxis/lr2oraja-endlessdream) setup I run for
 myself locally. It is not affiliated with either of those projects, and it is not meant for anyone else.
 
-There are no releases and no prebuilt binaries here. Nothing in this repository is a guide: there are no
-setup, usage or conversion instructions, and no information about where any game data can be obtained.
-
 ## What this branch is
 
 `main` is this fork's default branch and stays close to upstream. The trimmed variant my local setup
