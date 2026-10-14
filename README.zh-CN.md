@@ -6,9 +6,6 @@
 [LR2oraja Endless Dream](https://github.com/seraxis/lr2oraja-endlessdream) 环境的内部组件保留。
 本仓库与上述两个项目均无从属关系，也不供他人使用。
 
-这里没有任何 release，也没有预编译产物。本仓库不是教程：不含安装、使用或转换步骤，也不含任何
-获取游戏数据的途径。
-
 ## 这个分支是什么
 
 `orajaroot` 是上游项目的精简、无交互版本：去掉了 GUI 程序、打包脚本与图标，以及未使用的
