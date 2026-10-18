@@ -1,17 +1,27 @@
-# orajaroot
+# iidx2bms fork
 
 [简体中文](README.zh-CN.md) · English
 
-A personal fork of [iidx2bms](https://github.com/Glebsin/iidx2bms). I keep it **only** as an internal
-component of the [LR2oraja Endless Dream](https://github.com/seraxis/lr2oraja-endlessdream) setup I run for
-myself locally. It is not affiliated with either of those projects, and it is not meant for anyone else.
+This is my personal fork of [iidx2bms](https://github.com/Glebsin/iidx2bms), kept **only** as an internal
+component of the [LR2oraja Endless Dream](https://github.com/seraxis/lr2oraja-endlessdream) environment
+I run locally. This repository is not affiliated with either of those projects, and it is not meant for
+anyone else.
+
+## Branches
+
+- **`orajaroot`**: the read-only plugin dependency used by the LDJ side; do not modify.
+- **`orajaroot-plus`**: the branch for the LDJPlus direct-read work; this README describes it.
 
 ## What this branch is
 
-`orajaroot` is a trimmed, non-interactive variant of the upstream project: the GUI application, the
-packaging script and icon, and the unused `ifs_unpack` module have been dropped, leaving the internal
-modules that my own local setup calls. It is a personal working copy, not a product, and no support is
-offered for it.
+`orajaroot-plus` is a trimmed, non-interactive variant of the upstream project: the GUI application, the
+packaging script and icon, and the unused `ifs_unpack` module have been dropped.
+
+Runtime dependencies:
+
+- `ifstools`: an external Python dependency, installed separately (`pip install ifstools`)
+- `ffmpeg/ffmpeg.exe`: too large for the repository, so it is placed manually; only needed when an
+  old-style `.s3p` contains WMA keysounds
 
 ## Copyright notice
 
