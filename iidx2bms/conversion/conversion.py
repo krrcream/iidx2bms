@@ -404,7 +404,7 @@ def _copy_results(
     )
     artist_value = str(song_meta.get("artist") or "").strip() if artist_attr is None else str(artist_attr).strip()
     bga_base_value = str(song_meta.get("bga_filename") or "").strip()
-    bmp01_value, bmp01_source = _resolve_bga_with_extension(movie_root, bga_base_value)
+    bmp01_value, _ = _resolve_bga_with_extension(movie_root, bga_base_value)
     stage_target_name = "1.png"
     if include_stagefile:
         if game_version < 0:
@@ -426,8 +426,6 @@ def _copy_results(
             artist_value=artist_value,
             bmp01_value=bmp01_value if include_bga else None,
         )
-    if include_bga and bmp01_source is not None:
-        shutil.copy2(bmp01_source, result_dir / bmp01_source.name)
     for wav_file in sorted(main_audio_out_dir.glob("*.wav")):
         shutil.copy2(wav_file, result_dir / wav_file.name)
 
